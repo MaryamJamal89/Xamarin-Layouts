@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.GridLayout">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <BoxView 
+                Grid.Column="0"
+                Color="DarkOrange" />
+                <Label 
+                Grid.Column="1" 
+                Text="Xamarin Grid Layout" 
+                Background="Gray"
+                Padding="10, 0, 0, 0"
+                FontSize="Medium" 
+                VerticalTextAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="1.5*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="0 * 0"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Background="Gray"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+                <Label Text="0 * 1"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Background="Teal"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+                <Label Text="0 * 2"
+                       Grid.Column="2"
+                       Grid.Row="0"               
+                       Background="Gray"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+
+                <Label Text="1 * 1"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       Background="Gray"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+
+                <Label Text="2 * 0"
+                       Grid.Column="0"
+                       Grid.Row="2"
+                       Background="Teal"
+                       FontSize="16"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White" />
+
+                <Button Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"
+                        Text="Back" 
+                        Clicked="MainScreen" 
+                        FontSize="16"/>
+
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin LAB 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Button Text="ContentView Layout" Margin="30, 30, 30, 10" Clicked="ContentViewScreen" Background="skyblue" FontSize="16"/>
+        <Button Text="Relative Layout" Margin="30, 10, 30, 10" Clicked="RelativeScreen" Background="skyblue" FontSize="16"/>
+        <Button Text="Relative Layout 2" Margin="30, 10, 30, 10" Clicked="Relative2Screen" Background="skyblue" FontSize="16"/>
+        <Button Text="Stack Layout" Margin="30, 10, 30, 10" Clicked="StackScreen" Background="skyblue" FontSize="16"/>
+        <Button Text="ScrollView Layout" Margin="30, 10, 30, 10" Clicked="ScrollViewScreen" Background="skyblue" FontSize="16"/>
+        <Button Text="Grid Layout" Margin="30, 10, 30, 10" Clicked="GridScreen" Background="skyblue" FontSize="16"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.RelativeLayout">
+    <RelativeLayout>
+        <BoxView Color="DarkRed"
+                 WidthRequest="80"
+                 HeightRequest="80"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+
+        <BoxView Color="Silver"
+                 WidthRequest="300"
+                 HeightRequest="80"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Property=Width, Constant=80}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}" />
+        <Label Text="Xamarin RelativeLayout" TextColor="Black"
+               WidthRequest="300"
+               HeightRequest="80"
+               Margin="10"
+               FontSize="16"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Property=Width, Constant=80}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=0}"/>
+
+        <BoxView x:Name="oneThird"
+                 Color="Silver"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}" />
+        <Label Text="RelativeLayout" TextColor="Black"
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"               
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"/>
+
+        <BoxView Color="DarkRed"
+                 RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+                 RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}" />
+        <Label Text="RelativeLayout"
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.4}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.45}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"/>
+
+        <Button Text="Back" WidthRequest="80" Clicked="MainScreen" Background="Silver" TextColor="Black"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"                
+                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Constant=-50}"/>
+
+    </RelativeLayout>
+</ContentPage>

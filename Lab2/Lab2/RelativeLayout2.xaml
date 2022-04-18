@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab2.RelativeLayout2">
+
+    <!-- TODO:Convert all to relative layout -->
+    <RelativeLayout BackgroundColor="#ded6cc">
+
+        <BoxView Color="	#e9b679"
+                 x:Name="Header"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression 
+                 Type=RelativeToParent, 
+                 Property=Width,
+                 Factor=1 }"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression 
+                 Type=RelativeToParent, 
+                 Property=Height,
+                 Factor=0.2 }" />
+
+        <BoxView Color="#98b8b6"
+                 x:Name="Img"
+                 CornerRadius="50"
+                 WidthRequest="80"
+                 HeightRequest="80"
+                 RelativeLayout.XConstraint="{ConstraintExpression 
+                 Type=RelativeToView, 
+                 ElementName=Header,
+                 Property=Width,
+                 Factor=0.5,
+                 Constant=-40 }"
+                 RelativeLayout.YConstraint="{ConstraintExpression 
+                 Type=RelativeToView, 
+                 ElementName= Header,
+                 Property=Height,
+                 Factor=1,
+                 Constant=-40 }" />
+
+        <Button Text="Back"
+                Clicked="MainScreen"
+                BackgroundColor="Gray"
+                TextColor="White"
+                RelativeLayout.WidthConstraint="{
+                ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1}"
+                RelativeLayout.YConstraint="{
+                ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=1,
+                Constant=-45}"  />
+
+        <Label Text="UserName"
+               TextColor="Black"
+               FontSize="Large"
+               RelativeLayout.XConstraint="{
+               ConstraintExpression 
+               Type=RelativeToView, 
+               ElementName=Header,
+               Property=Width,
+               Factor=0.5,
+               Constant=-60 }"
+               RelativeLayout.YConstraint="{
+               ConstraintExpression 
+               Type=RelativeToView, 
+               ElementName= Header,
+               Property=Height,
+               Factor=1.4 }" />
+
+        <Label RelativeLayout.YConstraint="{
+               ConstraintExpression 
+               Type=RelativeToView, 
+               ElementName=Header,
+               Property=Height,
+               Factor=1.8 }"
+               RelativeLayout.WidthConstraint="{
+               ConstraintExpression
+               Type=RelativeToParent,
+               Property=Width,
+               Factor=1 }"
+               Margin="20, 0, 20, 10"
+               TextColor="Black"
+               FontSize="16">BIO
+        </Label>
+
+        <StackLayout                     
+                Padding="5"
+                Margin="0, 0, 0, 10"
+                Spacing="10"
+                Orientation="Horizontal"
+                BackgroundColor="White"
+                RelativeLayout.YConstraint="{
+                ConstraintExpression 
+                Type=RelativeToView, 
+                ElementName=Header,
+                Property=Height,
+                Factor=2 }"
+                RelativeLayout.WidthConstraint="{
+                ConstraintExpression
+                Type=RelativeToParent, 
+                Property=Width,
+                Factor=1 }" >
+
+            <BoxView Color="#98b8b6" />
+            <Label Text="Some Color" FontSize="16" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <BoxView Color="Gray" />
+            <Label Text="Gray" FontSize="16" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </StackLayout>
+
+        <Grid
+             RelativeLayout.YConstraint="{
+                ConstraintExpression 
+                Type=RelativeToParent, 
+                Property=Height,
+                Factor=.5 }"
+                RelativeLayout.WidthConstraint="{
+                ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=1 }">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                VerticalOptions="Center"
+                Margin="10"
+                TextColor="Black"
+                FontSize="16">UserName
+            </Label>
+            <Entry
+                Grid.Row="0"
+                Grid.Column="1"
+                VerticalOptions="Center"                
+                Margin="10"
+                FontSize="16"/>
+
+            <Label 
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center"                
+                Margin="10"
+                TextColor="Black"
+                FontSize="16">Age
+            </Label>
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="10"
+                VerticalOptions="Center"
+                FontSize="16"/>
+
+            <Label 
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="10"
+                VerticalOptions="Center"
+                TextColor="Black"
+                FontSize="16">Gender
+            </Label>
+            <Entry
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="10"
+                VerticalOptions="Center"
+                FontSize="16"/>
+        </Grid>
+
+    </RelativeLayout>
+
+</ContentPage>

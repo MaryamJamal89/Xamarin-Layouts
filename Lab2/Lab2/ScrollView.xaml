@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lab2"
+             x:Class="Lab2.ScrollView">
+    <ScrollView 
+        VerticalOptions="FillAndExpand"
+        Margin="20">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <BoxView Color="Silver"
+                         WidthRequest="80" />
+                <BoxView Color="Cyan"                         
+                         HorizontalOptions="FillAndExpand"
+                         HeightRequest="72"/>
+            </StackLayout>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+            <BoxView Color="Silver"
+                     HeightRequest="72"/>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+            <BoxView Color="Silver"
+                     HeightRequest="72"/>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+            <BoxView Color="Silver"
+                     HeightRequest="72"/>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+            <BoxView Color="Silver"
+                     HeightRequest="72"/>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+            <BoxView Color="Silver"
+                     HeightRequest="72"/>
+            <BoxView Color="DarkCyan"
+                     HeightRequest="72"/>
+
+            <Button Text="Back" Clicked="MainScreen" FontSize="16" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
